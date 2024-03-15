@@ -22,12 +22,13 @@ class TrainingConfig:
     min_depth = 1.45
     max_depth = 80.0
     # batch_size_train: int = 8
-    batch_size_train: int = 280
+    batch_size_train: int = 24
     # batch_size_eval: int = 8
-    batch_size_eval: int = 280
-    num_workers: int = 4
+    batch_size_eval: int = 24
+    # num_workers: int = 4
+    num_workers: int = 8
     # num_steps: int = 300_000
-    num_steps: int = 100_000
+    num_steps: int = 200_000
     # save_image_steps: int = 5_000
     save_image_steps: int = 2_000
     # save_model_steps: int = 10_000
@@ -35,7 +36,7 @@ class TrainingConfig:
     gradient_accumulation_steps: int = 1
     criterion: str = "l2"
     # lr: float = 1e-4
-    lr: float = 5*1e-4
+    lr: float = 2*1e-4
     lr_warmup_steps: int = 10_000
     adam_beta1: float = 0.9
     adam_beta2: float = 0.99
