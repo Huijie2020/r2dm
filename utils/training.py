@@ -22,9 +22,9 @@ class TrainingConfig:
     min_depth = 1.45
     max_depth = 80.0
     # batch_size_train: int = 8
-    batch_size_train: int = 200
+    batch_size_train: int = 280
     # batch_size_eval: int = 8
-    batch_size_eval: int = 200
+    batch_size_eval: int = 280
     num_workers: int = 4
     # num_steps: int = 300_000
     num_steps: int = 100_000
