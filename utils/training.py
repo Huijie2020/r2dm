@@ -31,6 +31,7 @@ class TrainingConfig:
     save_model_steps: int = 10_000
     gradient_accumulation_steps: int = 1
     criterion: str = "l2"
+    # lr: float = 1e-4
     lr: float = 5*1e-4
     lr_warmup_steps: int = 10_000
     adam_beta1: float = 0.9
