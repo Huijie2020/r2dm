@@ -26,7 +26,8 @@ class TrainingConfig:
     # batch_size_eval: int = 8
     batch_size_eval: int = 200
     num_workers: int = 4
-    num_steps: int = 300_000
+    # num_steps: int = 300_000
+    num_steps: int = 100_000
     save_image_steps: int = 5_000
     save_model_steps: int = 10_000
     gradient_accumulation_steps: int = 1
