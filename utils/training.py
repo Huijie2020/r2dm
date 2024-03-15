@@ -28,8 +28,10 @@ class TrainingConfig:
     num_workers: int = 4
     # num_steps: int = 300_000
     num_steps: int = 100_000
-    save_image_steps: int = 5_000
-    save_model_steps: int = 10_000
+    # save_image_steps: int = 5_000
+    save_image_steps: int = 2_000
+    # save_model_steps: int = 10_000
+    save_model_steps: int = 5_000
     gradient_accumulation_steps: int = 1
     criterion: str = "l2"
     # lr: float = 1e-4
