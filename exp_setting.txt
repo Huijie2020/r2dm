@@ -1,0 +1,16 @@
+
+# 0315_baseline_24_0.0002
+batch_size_train: int = 24
+num_workers: int = 8
+num_steps: int = 200_000
+save_image_steps: int = 2_000
+save_model_steps: int = 5_000
+lr: float = 2*1e-4
+
+accelerate launch train.py
+
+accelerate launch sample_and_save.py --ckpt $CHECKPOINT_PATH --output_dir $OUTPUT_DIR
+python evaluate.py --ckpt $CHECKPOINT_PATH --sample_dir $OUTPUT_DIR
+
+accelerate launch sample_and_save.py --ckpt logs/diffusion/kitti_360/spherical-1024/0315_baseline_24_0.0002/20240315T103753/models/diffusion_0000200000.pth --output_dir logs/diffusion/kitti_360/spherical-1024/0315_baseline_24_0.0002/samples1
+python evaluate.py --ckpt logs/diffusion/kitti_360/spherical-1024/0315_baseline_24_0.0002/20240315T103753/models/diffusion_0000200000.pth --sample_dir logs/diffusion/kitti_360/spherical-1024/0315_baseline_24_0.0002/samples1
