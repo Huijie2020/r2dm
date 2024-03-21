@@ -18,6 +18,7 @@ class TrainingConfig:
     ] = "spherical-1024"
     train_depth: bool = True
     train_reflectance: bool = True
+    train_mask: bool = False
     resolution: tuple[int, int] = (64, 1024)
     min_depth = 1.45
     max_depth = 80.0
